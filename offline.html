@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Super Radio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .offline-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--background-color);
+        }
+
+        .offline-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .offline-message {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .offline-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .retry-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+        }
+
+        .retry-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elevation);
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-page">
+        <i class="fas fa-wifi-slash offline-icon"></i>
+        <h1 class="offline-message">You're Offline</h1>
+        <p class="offline-description">
+            Looks like you've lost your internet connection. 
+            Please check your connection and try again.
+        </p>
+        <button class="retry-button" onclick="window.location.reload()">
+            <i class="fas fa-redo"></i> Try Again
+        </button>
+    </div>
+    <script>
+        // Check for online status
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html> 

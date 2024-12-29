@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Radio - Your Premier Online Radio Station</title>
+    <meta name="description" content="Listen to the best music 24/7 with Super Radio. Live shows, great music, and amazing DJs.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="https://placehold.co/192x192/ff1e8c/FFF?text=SR">
+    <meta name="theme-color" content="#ff1e8c">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(error => {
+                        console.error('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="app-container">
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <img src="https://placehold.co/200x45/ff1e8c/FFF?text=Super+Radio" alt="Super Radio">
+            </div>
+            <button class="listen-live-btn">
+                <i class="fas fa-broadcast-tower"></i>
+                Listen Live
+            </button>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <div class="hero-background"></div>
+                <div class="hero-content">
+                    <div class="live-badge">
+                        <div class="pulse"></div>
+                        Live
+                    </div>
+                    <div class="current-track">
+                        <div class="track-artwork">
+                            <img src="https://placehold.co/400x400/333/FFF?text=Music" alt="Current track">
+                        </div>
+                        <div class="track-details">
+                            <span class="now-playing-label">Now Playing</span>
+                            <h1>Loading...</h1>
+                            <p>Please wait...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="recent-tracks">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Recently Played</h2>
+                        <button class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div class="tracks-grid">
+                        <!-- Tracks will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-news">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Music News</h2>
+                    </div>
+                    <div class="news-grid">
+                        <!-- News items will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="player-bar">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="player-content">
+                <div class="now-playing">
+                    <img src="https://placehold.co/400x400/333/FFF?text=Music" alt="Current track" class="current-track-img">
+                    <div class="track-info">
+                        <div class="track-title">Loading...</div>
+                        <div class="track-artist">Please wait...</div>
+                    </div>
+                </div>
+                <button class="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="volume-control">
+                    <i class="fas fa-volume-up"></i>
+                    <div class="volume-slider">
+                        <input type="range" id="volumeSlider" min="0" max="100" value="80">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

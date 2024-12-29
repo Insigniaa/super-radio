@@ -1,0 +1,58 @@
+{
+    "name": "Super Radio",
+    "short_name": "Super Radio",
+    "description": "Your premier online radio station featuring the best music, shows, and live DJ performances.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#ff1e8c",
+    "icons": [
+        {
+            "src": "https://placehold.co/192x192/ff1e8c/FFF?text=SR",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://placehold.co/512x512/ff1e8c/FFF?text=SR",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "splash_pages": null,
+    "orientation": "any",
+    "categories": ["music", "entertainment", "radio"],
+    "screenshots": [
+        {
+            "src": "https://placehold.co/1080x1920/333/FFF?text=Super+Radio+App",
+            "sizes": "1080x1920",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Super Radio Mobile App"
+        },
+        {
+            "src": "https://placehold.co/1920x1080/333/FFF?text=Super+Radio+Desktop",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Super Radio Desktop App"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Play Radio",
+            "short_name": "Play",
+            "description": "Start listening to Super Radio",
+            "url": "/?action=play",
+            "icons": [{ "src": "https://placehold.co/96x96/ff1e8c/FFF?text=Play", "sizes": "96x96" }]
+        },
+        {
+            "name": "Recent Tracks",
+            "short_name": "Recent",
+            "description": "View recently played tracks",
+            "url": "/?section=recent",
+            "icons": [{ "src": "https://placehold.co/96x96/ff1e8c/FFF?text=Recent", "sizes": "96x96" }]
+        }
+    ]
+} 
